@@ -625,6 +625,8 @@ require('lazy').setup({
       local servers = {
         bashls = {},
         tailwindcss = {},
+        rustywind = {},
+        emmet_ls = {},
         -- clangd = {},
         -- clangd = {},
         -- clangd = {},
@@ -725,6 +727,7 @@ require('lazy').setup({
         elixir = { "mix" },
         heex = { "mix" },
         eex = { "mix" },
+        tailwindcss = { "rustywind" },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
@@ -935,6 +938,14 @@ require('lazy').setup({
         additional_vim_regex_highlighting = { 'ruby' },
       },
       indent = { enable = true, disable = { 'ruby' } },
+      init_options = {
+        user_languages = {
+          elixir = "html-eex",
+          eelixir = "html-eex",
+          heex = "html-heex",
+        },
+      },
+      sync_install = false,
     },
     -- There are additional nvim-treesitter modules that you can use to interact
     -- with nvim-treesitter. You should go explore a few and see what interests you:
